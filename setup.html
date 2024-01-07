@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tournament Option</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Tournament Bracket Organizer</h1>
+      </header>
+
+      <main>
+        <div class="form-section">
+          <label for="tournament-type">Tournament Type:</label>
+          <select id="tournament-type">
+            <option value="video_game">Video Game</option>
+            <option value="sports">Sports</option>
+            <option value="board_game">Board Game</option>
+            <option value="card_game">Card Game</option>
+            <option value="martial_arts">Martial Arts</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-section">
+          <label for="tournament-name">Tournament Name:</label>
+          <input type="text" id="tournament-name" required />
+        </div>
+
+        <div class="date-section">
+          <label for="start-date">Start Date:</label>
+          <input type="date" id="start-date" />
+          <label for="end-date">End Date:</label>
+          <input type="date" id="end-date" />
+          <label>
+            <input type="checkbox" id="single-day" /> Single Day Tournament
+          </label>
+        </div>
+
+        <div class="form-section">
+          <label for="team-size">Team Size:</label>
+          <select id="team-size">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+
+        <div id="team-names-section">
+          <div class="team-row">
+            <input type="text" placeholder="Team 1 Name" />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 1 of Team 1"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 2 of Team 1"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 3 of Team 1"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 4 of Team 1"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 5 of Team 1"
+            />
+          </div>
+          <!-- Team 2 -->
+          <div class="team-row">
+            <input type="text" placeholder="Team 2 Name" />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 1 of Team 2"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 2 of Team 2"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 3 of Team 2"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 4 of Team 2"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 5 of Team 2"
+            />
+          </div>
+          <!-- Team 3 -->
+          <div class="team-row">
+            <input type="text" placeholder="Team 3 Name" />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 1 of Team 3"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 2 of Team 3"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 3 of Team 3"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 4 of Team 3"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 5 of Team 3"
+            />
+          </div>
+          <!-- Team 4 -->
+          <div class="team-row">
+            <input type="text" placeholder="Team 4 Name" />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 1 of Team 4"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 2 of Team 4"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 3 of Team 4"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 4 of Team 4"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 5 of Team 4"
+            />
+          </div>
+          <!-- Team 5 -->
+          <div class="team-row">
+            <input type="text" placeholder="Team 5 Name" />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 1 of Team 5"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 2 of Team 5"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 3 of Team 5"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 4 of Team 5"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 5 of Team 5"
+            />
+          </div>
+          <!-- Team 6 -->
+          <div class="team-row">
+            <input type="text" placeholder="Team 6 Name" />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 1 of Team 6"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 2 of Team 6"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 3 of Team 6"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 4 of Team 6"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 5 of Team 6"
+            />
+          </div>
+          <!-- Team 7 -->
+          <div class="team-row">
+            <input type="text" placeholder="Team 7 Name" />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 1 of Team 7"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 2 of Team 7"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 3 of Team 7"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 4 of Team 7"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 5 of Team 7"
+            />
+          </div>
+          <!-- Team 8 -->
+          <div class="team-row">
+            <input type="text" placeholder="Team 8 Name" />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 1 of Team 8"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 2 of Team 8"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 3 of Team 8"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 4 of Team 8"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 5 of Team 8"
+            />
+          </div>
+          <!-- Team 9 -->
+          <div class="team-row">
+            <input type="text" placeholder="Team 9 Name" />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 1 of Team 9"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 2 of Team 9"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 3 of Team 9"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 4 of Team 9"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 5 of Team 9"
+            />
+          </div>
+          <!-- Team 10 -->
+          <div class="team-row">
+            <input type="text" placeholder="Team 10 Name" />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 1 of Team 10"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 2 of Team 10"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 3 of Team 10"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 4 of Team 10"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 5 of Team 10"
+            />
+          </div>
+          <!-- Team 11 -->
+          <div class="team-row">
+            <input type="text" placeholder="Team 11 Name" />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 1 of Team 11"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 2 of Team 11"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 3 of Team 11"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 4 of Team 11"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 5 of Team 11"
+            />
+          </div>
+          <!-- Team 12 -->
+          <div class="team-row">
+            <input type="text" placeholder="Team 12 Name" />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 1 of Team 12"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 2 of Team 12"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 3 of Team 12"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 4 of Team 12"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 5 of Team 12"
+            />
+          </div>
+          <!-- Team 13 -->
+          <div class="team-row">
+            <input type="text" placeholder="Team 13 Name" />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 1 of Team 13"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 2 of Team 13"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 3 of Team 13"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 4 of Team 13"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 5 of Team 13"
+            />
+          </div>
+          <!-- Team 14 -->
+          <div class="team-row">
+            <input type="text" placeholder="Team 14 Name" />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 1 of Team 14"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 2 of Team 14"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 3 of Team 14"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 4 of Team 14"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 5 of Team 14"
+            />
+          </div>
+          <!-- Team 15 -->
+          <div class="team-row">
+            <input type="text" placeholder="Team 15 Name" />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 1 of Team 15"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 2 of Team 15"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 3 of Team 15"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 4 of Team 15"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 5 of Team 15"
+            />
+          </div>
+          <!-- Team 16 -->
+          <div class="team-row">
+            <input type="text" placeholder="Team 16 Name" />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 1 of Team 16"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 2 of Team 16"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 3 of Team 16"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 4 of Team 16"
+            />
+            <input
+              type="text"
+              class="player-input"
+              placeholder="Player 5 of Team 16"
+            />
+          </div>
+        </div>
+        <div class="button-container">
+          <button id="randomize" class="button">Randomize Teams</button>
+          <button id="start-tournament" class="button">Start Tournament</button>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="setupScript.js"></script>
+    <script type="module" src="firebaseCNFG.js"></script>
+  </body>
+</html>

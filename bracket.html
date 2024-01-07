@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="bracket.css" />
+    <title>Tournament Bracket</title>
+  </head>
+  <body>
+    <div class="header-container">
+      <div class="tournament-header">
+        <h1 id="tournament-name">Tournament Name</h1>
+      </div>
+      <div class="tournament-info-button-container">
+        <button id="show-tournament-info" class="button">Info</button>
+      </div>
+    </div>
+    <div id="tournamentDetailsModal" class="tournament-modal">
+      <div class="tournament-modal-content">
+        <span class="tournament-close">&times;</span>
+        <h2>Tournament Information</h2>
+        <div id="detailedTournamentInfo"></div>
+      </div>
+    </div>
+    <a href="setup.html" class="back-button">Back to Setup</a>
+    <div class="bracket-container">
+      <div class="round-container">
+        <h2 class="round-title">Round 1</h2>
+        <div class="round" id="round1">
+          <div class="match" id="match1">
+            <div class="team" id="match1-team1"></div>
+            <div class="team-separator"></div>
+            <div class="team" id="match1-team2"></div>
+          </div>
+          <div class="match" id="match2">
+            <div class="team" id="match2-team1"></div>
+            <div class="team-separator"></div>
+            <div class="team" id="match2-team2"></div>
+          </div>
+          <div class="match" id="match3">
+            <div class="team" id="match3-team1"></div>
+            <div class="team-separator"></div>
+            <div class="team" id="match3-team2"></div>
+          </div>
+          <div class="match" id="match4">
+            <div class="team" id="match4-team1"></div>
+            <div class="team-separator"></div>
+            <div class="team" id="match4-team2"></div>
+          </div>
+          <div class="match" id="match5">
+            <div class="team" id="match5-team1"></div>
+            <div class="team-separator"></div>
+            <div class="team" id="match5-team2"></div>
+          </div>
+          <div class="match" id="match6">
+            <div class="team" id="match6-team1"></div>
+            <div class="team-separator"></div>
+            <div class="team" id="match6-team2"></div>
+          </div>
+          <div class="match" id="match7">
+            <div class="team" id="match7-team1"></div>
+            <div class="team-separator"></div>
+            <div class="team" id="match7-team2"></div>
+          </div>
+          <div class="match" id="match8">
+            <div class="team" id="match8-team1"></div>
+            <div class="team-separator"></div>
+            <div class="team" id="match8-team2"></div>
+          </div>
+        </div>
+      </div>
+      <div class="round-container">
+        <h2 class="round-title">Quarter-Finals</h2>
+        <div class="round" id="quarterfinals">
+          <div class="match" id="quarter1">
+            <div class="team" id="quarter1-team1"></div>
+            <div class="team-separator"></div>
+            <div class="team" id="quarter1-team2"></div>
+          </div>
+          <div class="match" id="quarter2">
+            <div class="team" id="quarter2-team1"></div>
+            <div class="team-separator"></div>
+            <div class="team" id="quarter2-team2"></div>
+          </div>
+          <div class="match" id="quarter3">
+            <div class="team" id="quarter3-team1"></div>
+            <div class="team-separator"></div>
+            <div class="team" id="quarter3-team2"></div>
+          </div>
+          <div class="match" id="quarter4">
+            <div class="team" id="quarter4-team1"></div>
+            <div class="team-separator"></div>
+            <div class="team" id="quarter4-team2"></div>
+          </div>
+        </div>
+      </div>
+      <div class="round-container">
+        <h2 class="round-title">Semi-finals</h2>
+        <div class="round" id="semifinals">
+          <div class="match" id="semi1">
+            <div class="team" id="semi1-team1"></div>
+            <div class="team-separator"></div>
+            <div class="team" id="semi1-team2"></div>
+          </div>
+          <div class="match" id="semi2">
+            <div class="team" id="semi2-team1"></div>
+            <div class="team-separator"></div>
+            <div class="team" id="semi2-team2"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="round-container">
+        <h2 class="round-title">Final</h2>
+        <div class="round" id="final">
+          <div class="match" id="finalMatch">
+            <div class="team" id="finalMatch-team1"></div>
+            <div class="team-separator"></div>
+            <div class="team" id="finalMatch-team2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="settingsModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edit Match Details</h2>
+        <form id="matchForm">
+          <h3>Select the Winner</h3>
+          <div id="teamChoices"></div>
+          <label for="score">Score:</label>
+          <input type="text" id="score" name="score" />
+          <label for="comment">Comments:</label>
+          <textarea id="comment" name="comment"></textarea>
+          <label for="imageUpload">Upload Image:</label>
+          <div id="imageUploadContainer">
+            <input type="file" id="imageUpload" name="image" multiple />
+          </div>
+          <div id="selectedImages"></div>
+          <button type="submit">Save Changes</button>
+        </form>
+      </div>
+    </div>
+    <div id="winnerModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeWinnerModal">&times;</span>
+        <h2>Congratulations!</h2>
+        <p id="winnerMessage"></p>
+        <button id="newTournament">Go Back to Setup</button>
+        <button id="closeModal">Cancel</button>
+      </div>
+    </div>
+    <script type="module" src="bracketScript.js"></script>
+  </body>
+</html>
