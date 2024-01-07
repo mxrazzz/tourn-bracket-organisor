@@ -42,7 +42,7 @@ body {
   background-color: #5e0705;
 }
 
-/* Brackets  */
+/* Brackets */
 .bracket-container {
   display: flex;
   justify-content: center;
@@ -65,7 +65,7 @@ body {
 .match {
   background-color: #fff;
   border: 1px solid #ddd;
-  margin-bottom: 20px; /* Increased margin for better spacing between matches */
+  margin-bottom: 20px; 
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
 }
@@ -75,30 +75,30 @@ body {
   transform: scale(1.05);
 }
 
-/* Styling for the team boxes inside a match */
+/* Team boxes */
 .team {
   padding: 15px;
   text-align: center;
-  border-bottom: 1px solid #ddd; /* Separator between teams */
+  border-bottom: 1px solid #ddd; 
 }
 
-/* Remove the border from the bottom team in each match */
+
 .match .team:last-child {
   border-bottom: none;
 }
 
 .match.locked {
   cursor: not-allowed;
-  opacity: 0.5; /* or any other styling to indicate it's locked */
+  opacity: 0.5; 
 }
 
 .team.eliminated {
-  opacity: 0.5; /* Make the team look faded */
-  text-decoration: line-through; /* Cross out the team's name */
-  color: #ff0000; /* Change the text color to red or any color you prefer */
+  opacity: 0.5; 
+  text-decoration: line-through; 
+  color: #ff0000; 
 }
 
-/* Modal styling */
+/* Pop up styling */
 .modal {
   display: none;
   position: fixed;
@@ -169,8 +169,8 @@ body {
 
 #selectedImages {
   display: flex;
-  flex-direction: column; /* Stack each file and button pair vertically */
-  align-items: flex-start; /* Align items to the start */
+  flex-direction: column; 
+  align-items: flex-start; 
   margin-bottom: 5px;
 }
 
@@ -182,11 +182,11 @@ body {
 
 #selectedImages div span {
   margin-right: 10px;
-  max-width: 200px; /* Fixed max width for the file name */
-  white-space: nowrap; /* Prevents text from wrapping */
-  overflow: hidden; /* Hide overflow */
-  text-overflow: ellipsis; /* Add ellipsis for overflow text */
-  font-size: 12px; /* Smaller font size for the file name */
+  max-width: 200px; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  font-size: 12px; 
 }
 
 #selectedImages div button {
@@ -195,8 +195,8 @@ body {
   border: none;
   color: red;
   font-weight: bold;
-  font-size: 12px; /* Adjust font size as needed */
-  padding: 1px 5px; /* Adjust padding as needed */
+  font-size: 12px; 
+  padding: 1px 5px; 
   display: inline-block;
   margin-left: 10px;
 }
@@ -206,8 +206,6 @@ body {
 }
 
 /* Tourn info*/
-
-/* Unique Modal Styling */
 .tournament-modal {
   display: none;
   position: fixed;
@@ -225,7 +223,7 @@ body {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 50%; /* Adjust based on preference */
+  width: 50%; 
   animation-name: modalFadeIn;
   animation-duration: 0.4s;
 }
@@ -244,6 +242,7 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+/* Animations */
 
 @keyframes modalFadeIn {
   from {
@@ -264,6 +263,8 @@ body {
     transform: scale(1);
   }
 }
+
+/* winner boxes */
 
 #winnerModal {
   animation: fadeIn 0.5s ease;
@@ -300,7 +301,7 @@ body {
 }
 
 #closeModal:hover {
-  background-color: #d32f2f; /* Darker Red */
+  background-color: #d32f2f; 
 }
 
 .back-button {

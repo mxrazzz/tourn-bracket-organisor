@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google font link  -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Link to CSS file for styling -->
     <link rel="stylesheet" href="styles.css" />
     <title>Tournament Option</title>
   </head>
@@ -15,7 +17,7 @@
       <header>
         <h1>Tournament Bracket Organizer</h1>
       </header>
-
+      <!-- Entering all the tournament info -->
       <main>
         <div class="form-section">
           <label for="tournament-type">Tournament Type:</label>
@@ -54,7 +56,7 @@
             <option value="5">5</option>
           </select>
         </div>
-
+        <!-- Section for entering team and player names -->
         <div id="team-names-section">
           <div class="team-row">
             <input type="text" placeholder="Team 1 Name" />
@@ -520,6 +522,7 @@
             />
           </div>
         </div>
+        <!-- Buttons for randomizing teams and starting the tournament -->
         <div class="button-container">
           <button id="randomize" class="button">Randomize Teams</button>
           <button id="start-tournament" class="button">Start Tournament</button>
@@ -527,6 +530,7 @@
       </main>
     </div>
 
+    <!-- Link to the JavaScript files -->
     <script type="module" src="setupScript.js"></script>
     <script type="module" src="firebaseCNFG.js"></script>
   </body>

@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google font link  -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Link to CSS file for styling -->
     <link rel="stylesheet" href="bracket.css" />
     <title>Tournament Bracket</title>
   </head>
@@ -19,6 +21,7 @@
         <button id="show-tournament-info" class="button">Info</button>
       </div>
     </div>
+    <!-- Modal for displaying tournament details -->
     <div id="tournamentDetailsModal" class="tournament-modal">
       <div class="tournament-modal-content">
         <span class="tournament-close">&times;</span>
@@ -26,7 +29,11 @@
         <div id="detailedTournamentInfo"></div>
       </div>
     </div>
+
+    <!-- Back button to return to the setup page -->
     <a href="setup.html" class="back-button">Back to Setup</a>
+
+    <!-- Main bracket container for the tournament -->
     <div class="bracket-container">
       <div class="round-container">
         <h2 class="round-title">Round 1</h2>
@@ -125,7 +132,7 @@
         </div>
       </div>
     </div>
-
+    <!-- Modal for editing match details -->
     <div id="settingsModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
@@ -146,6 +153,7 @@
         </form>
       </div>
     </div>
+    <!-- Modal for displaying the winner text -->
     <div id="winnerModal" class="modal">
       <div class="modal-content">
         <span class="close" id="closeWinnerModal">&times;</span>
@@ -155,6 +163,7 @@
         <button id="closeModal">Cancel</button>
       </div>
     </div>
+    <!-- Link to the JavaScript files -->
     <script type="module" src="bracketScript.js"></script>
   </body>
 </html>

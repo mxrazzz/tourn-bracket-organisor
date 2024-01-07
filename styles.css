@@ -15,7 +15,7 @@ h1 {
   text-align: center;
   color: red;
 }
-
+/* Form styling */
 .form-section,
 .date-section {
   margin-bottom: 15px;
@@ -38,7 +38,7 @@ select {
   width: 250px; 
 }
 
-
+/* Entering teams & players */
 
 #team-names-section {
   display: grid;
@@ -54,9 +54,11 @@ select {
 }
 
 .team-member-input {
-  display: none; /* Initially hidden */
+  display: none; 
   margin-top: 5px;
 }
+
+/* Button Styling */
 
 .button-container {
   display: flex;

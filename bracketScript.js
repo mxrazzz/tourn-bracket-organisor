@@ -17,7 +17,7 @@ import {
 
 let currentMatchFiles = []; // Temporary storage for files
 
-// Function to populate the bracket
+//  fills the bracket with team names
 async function populateBracket(tournamentName) {
   const tournamentRef = doc(db, "tournament", tournamentName);
   const teamsCollectionRef = collection(tournamentRef, "teams");
@@ -31,12 +31,12 @@ async function populateBracket(tournamentName) {
         const teamData = teamSnapshot.data();
         if (teamData && teamData.name) {
           const matchIndex = Math.ceil(i / 2);
-          const teamPosition = i % 2 === 0 ? "team2" : "team1"; // Determine if it's the first or second team in the match
+          const teamPosition = i % 2 === 0 ? "team2" : "team1";
           const matchElement = document.getElementById(
             `match${matchIndex}-${teamPosition}`
           );
           if (matchElement) {
-            matchElement.textContent = teamData.name;
+            matchElement.textContent = teamData.name; // puts the team name in the bracket
           }
         }
       }
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     document.getElementById("tournament-name").textContent = tournamentName;
     await populateBracket(tournamentName);
     updateMatchLockingStatus();
-    attachEventListenersToMatches(); // Call after populating the bracket
+    attachEventListenersToMatches(); // call after populating the bracket
   }
 });
 document
@@ -69,7 +69,7 @@ document
     const winnerInput = document.querySelector('input[name="winner"]:checked');
     if (!winnerInput) {
       alert("Please select a winner.");
-      return; // Stop the form submission if winner is not selected
+      return; // stops form submission if winner is not selected
     }
 
     const matchId = this.dataset.matchId;
@@ -255,7 +255,7 @@ async function uploadImagesToFirebaseStorage(files) {
     uploadPromises.push(uploadPromise);
   });
 
-  // Wait for all uploads to complete and return the URLs
+  //
   const imageUrls = await Promise.all(uploadPromises);
   return imageUrls;
 }
@@ -465,7 +465,7 @@ function hideModal() {
   modal.style.display = "none";
 }
 
-// Close modal on clicking 'X' or outside the modal
+// Closes on clicking X
 document
   .querySelector(".tournament-close")
   .addEventListener("click", hideModal);
@@ -494,7 +494,7 @@ document.getElementById("closeModal").addEventListener("click", function () {
   document.getElementById("winnerModal").style.display = "none";
 });
 
-// Also close the modal if 'X' is clicked
+// Also closes if X is clicked
 document
   .getElementById("closeWinnerModal")
   .addEventListener("click", function () {
